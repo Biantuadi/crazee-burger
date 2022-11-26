@@ -22,4 +22,29 @@ const LoginPageStyled = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-blend-mode: darken;
+
+  .logo{
+    @media screen and (max-width: 768px) and (min-width: 375px) {
+    transform: scale(1.7);
+    margin-bottom: -40px;
+  }
+
+  @media screen and (max-width: 375px) and (min-width: 310px){
+    transform: scale(1.5);
+    margin-bottom: -40px;
+
+    h1{
+      font-size: 26px;
+    }
+  }
+
+  @media screen and (max-width: 310px) and (min-width: 280px){
+    transform: scale(1.3);
+
+    h1{
+      font-size: 23px;
+    }
+  }
+  }
+  
 `;

@@ -44,10 +44,11 @@ export default function LoginForm() {
 const LoginFormStyled = styled.form`
   padding: 2.5rem 2rem;
   text-align: center;
-  /* max-width: 500px; */
+
+  
 
   hr {
-    border: 1.5px solid ${theme.colors.primary};
+    border: 1.5px solid ${theme.colors.primary_burger};
     /* width: 500px; */
   }
 
@@ -57,7 +58,7 @@ const LoginFormStyled = styled.form`
   }
 
   h2 {
-    color: #8e8b8b;
+    color: ${theme.colors.white};
     font-size: 36px;
   }
 

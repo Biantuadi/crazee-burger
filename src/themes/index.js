@@ -40,7 +40,9 @@ const colors = {
     P5: "48px",
     P6: "60px",
   }
+
   const gridUnit = 8
+
   const borderRadius = {
     subtle: 1,
     round: "5px",
@@ -48,6 +50,7 @@ const colors = {
     circle: "50%",
   }
   const shadows = {}
+
   const weights = {
     light: 300,
     regular: 400,
@@ -55,6 +58,12 @@ const colors = {
     semiBold: 600,
     bold: 700,
     heavy: 800,
+  }
+
+  const breakpoints = {
+    mobile: 0,
+    tablet: 768,
+    desktop: 1024,
   }
   
   export const theme = {
@@ -65,5 +74,6 @@ const colors = {
     shadows,
     weights,
     spacing,
+    breakpoints,
   }
   
