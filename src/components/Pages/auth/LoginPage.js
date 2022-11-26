@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { theme } from "../../../themes";
 import Logo from "../../reusable-ui/Logo";
 import LoginForm from "./LoginForm";
 
@@ -22,6 +21,5 @@ const LoginPageStyled = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-blend-mode: darken;
 `;
