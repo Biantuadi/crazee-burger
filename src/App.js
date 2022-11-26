@@ -1,3 +1,4 @@
+import "./App.css";
 import RouterRoutes from "./routes/Router.routes";
 
 function App() {
