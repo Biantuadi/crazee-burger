@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { BsPersonCircle } from "react-icons/bs";
 import { theme } from "../../../themes";
 
 export default function LoginForm() {
@@ -20,11 +19,11 @@ export default function LoginForm() {
   return (
     <LoginFormStyled action="submit" onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
-      <hr/>
+      <hr />
       <h2>Connectez-vous</h2>
 
       <div className="input-with-icon">
-        <BsPersonCircle className="icon" />
+        <i className="fas fa-user icon"></i>
         <input
           type="name"
           required
@@ -34,7 +33,10 @@ export default function LoginForm() {
         />
       </div>
 
-      <input type="submit" value="Accéder à mon espace" />
+      <button type="submit" className="button-with-icon">
+        Accéder à mon espace
+        <i className="fas fa-chevron-right icon"></i>
+      </button>
     </LoginFormStyled>
   );
 }
@@ -42,8 +44,7 @@ export default function LoginForm() {
 const LoginFormStyled = styled.form`
   padding: 2.5rem 2rem;
   text-align: center;
-  max-width: 500px;
-
+  /* max-width: 500px; */
 
   hr {
     border: 1.5px solid ${theme.colors.primary};
@@ -60,10 +61,6 @@ const LoginFormStyled = styled.form`
     font-size: 36px;
   }
 
-  input[type="submit"] {
-    margin-top: 25px;
-  }
-
   .input-with-icon {
     background-color: ${theme.colors.white};
     border-radius: 5px;
@@ -73,9 +70,12 @@ const LoginFormStyled = styled.form`
     margin: 20px 0;
 
     .icon {
-      font-size: 20px;
+      font-size: 15px;
       margin: 0 13px 0 0;
       color: #93a2b1;
+      border: 1px solid #93a2b1;
+      border-radius: 50%;
+      padding: 5px;
     }
 
     input {
@@ -96,5 +96,41 @@ const LoginFormStyled = styled.form`
         outline: 1.7px solid ${theme.colors.primary};
       }
     }
+  }
+
+  .button-with-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: ${theme.colors.primary};
+    border-radius: 5px;
+    font-weight: 600;
+    width: 100%;
+    padding: 18px 24px;
+    cursor: pointer;
+    transition: all 0.17s ease-in-out;
+    color: ${theme.colors.white};
+    border: none;
+    outline: none;
+    font-size: 18px;
+
+    
+    .icon {
+      font-size: 20px;
+      color: white;
+      margin: 0 0 0 13px;
+    }
+
+      &:hover {
+        background-color: white;
+        color: ${theme.colors.primary};
+        border: 1px solid ${theme.colors.primary};
+  
+        .icon {
+          color: ${theme.colors.primary};
+        }
+      }
+    
+    
   }
 `;
