@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { theme } from "../../../themes";
 
 export default function LoginForm() {
   // 1. State
@@ -32,12 +33,17 @@ export default function LoginForm() {
 }
 
 const LoginFormStyled = styled.form`
-  border: 1px solid black;
+  border: 1px solid ${theme.colors.white};
   padding: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  h1,h2 {
+
+    color: ${theme.colors.white};
+  }
 
   input[type="submit"] {
     margin-top: 25px;
