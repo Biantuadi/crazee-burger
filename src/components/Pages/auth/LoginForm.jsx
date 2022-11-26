@@ -21,11 +21,11 @@ function LoginForm() {
       <input
         type="name"
         required
-        placeholder="Entrez votre prenom"
+        placeholder="Entrez votre prénom"
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       />
-      <input type="submit" value="Envoyer" />
+      <input type="submit" value="Accéder à mon espace" />
     </form>
   );
 }
