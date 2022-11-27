@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../themes";
+import ButtonSubmit from "../../ButtonSubmit";
+import Input from "../../Input";
 
 export default function LoginForm() {
   // 1. State
@@ -22,21 +24,22 @@ export default function LoginForm() {
       <hr />
       <h2>Connectez-vous</h2>
 
-      <div className="input-with-icon">
-        <i className="fas fa-user icon"></i>
-        <input
-          type="name"
-          required
-          placeholder="Entrez votre prénom"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-      </div>
+      <Input
+        value={inputValue}
+        onChange={(e) => setInputValue(e.target.value)}
+        Icon={<i class="far fa-user-circle icon"></i>}
+        type="name"
+        placeholder="Entrez votre prénom"
+        className="input_Auth"
+        required
+      />
 
-      <button type="submit" className="button-with-icon">
-        Accéder à mon espace
-        <i className="fas fa-chevron-right icon"></i>
-      </button>
+      <ButtonSubmit
+        className="button_Auth"
+        type="submit"
+        label="Accéder à mon espace"
+        Icon={<i className="fas fa-chevron-right icon"></i>}
+      />
     </LoginFormStyled>
   );
 }
@@ -45,11 +48,8 @@ const LoginFormStyled = styled.form`
   padding: 2.5rem 2rem;
   text-align: center;
 
-  
-
   hr {
     border: 1.5px solid ${theme.colors.primary_burger};
-    /* width: 500px; */
   }
 
   h1 {
@@ -62,76 +62,16 @@ const LoginFormStyled = styled.form`
     font-size: 36px;
   }
 
-  .input-with-icon {
-    background-color: ${theme.colors.white};
-    border-radius: 5px;
-    padding: 18px 24px;
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-
+  .button_Auth {
     .icon {
-      font-size: 15px;
-      margin: 0 13px 0 0;
-      color: #93a2b1;
-      border: 1px solid #93a2b1;
-      border-radius: 50%;
-      padding: 5px;
-    }
-
-    input {
-      border: none;
-      background-color: transparent;
-      outline: none;
-      font-size: 18px;
-      color: #17161a;
-      width: 100%;
-      transition: all 0.17s ease-in-out;
-      border-radius: 3px;
-
-      &::placeholder {
-        color: #93a2b1;
-      }
-
-      &:focus {
-        outline: 1.7px solid ${theme.colors.primary};
-      }
-    }
-  }
-
-  .button-with-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: ${theme.colors.primary};
-    border-radius: 5px;
-    font-weight: 600;
-    width: 100%;
-    padding: 18px 24px;
-    cursor: pointer;
-    transition: all 0.17s ease-in-out;
-    color: ${theme.colors.white};
-    border: none;
-    outline: none;
-    font-size: 18px;
-
-    
-    .icon {
-      font-size: 20px;
-      color: white;
+      color: ${theme.colors.white};
       margin: 0 0 0 13px;
     }
 
-      &:hover {
-        background-color: white;
+    &:hover {
+      .icon {
         color: ${theme.colors.primary};
-        border: 1px solid ${theme.colors.primary};
-  
-        .icon {
-          color: ${theme.colors.primary};
-        }
       }
-    
-    
+    }
   }
 `;

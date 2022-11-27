@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../themes";
-// import {logoImg} from '/img/logo-burger-orange.png';
+import { theme } from "../themes";
 
 export default function Logo() {
   return (
@@ -21,7 +20,6 @@ const LogoStyled = styled.div`
   h1 {
     font-size: 30px;
     text-align: center;
-    font-weight: 700;
     color: ${theme.colors.primary_burger};
     letter-spacing: 1.5px;
     line-height: 1em;
