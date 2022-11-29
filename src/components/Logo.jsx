@@ -16,7 +16,7 @@ const LogoStyled = styled.div`
   display: flex;
   align-items: center;
   transform: scale(2.5);
-
+  
   h1 {
     font-size: 30px;
     text-align: center;
