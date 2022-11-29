@@ -6,7 +6,7 @@ export default function Logo() {
   return (
     <LogoStyled className="logo">
       <h1>CRAZEE</h1>
-      <img src="/img/logo-burger-orange.png" alt="logo" />
+      <img src="/images/logo-burger-orange.png" alt="logo" />
       <h1>BURGER</h1>
     </LogoStyled>
   );
