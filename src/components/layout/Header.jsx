@@ -21,4 +21,8 @@ const HeaderStyled = styled.header`
   padding: 7px 18px;
   /* height: 5rem; */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+  @media (max-width: 768px) {
+    padding: 7px 0px;
+  }
 `;

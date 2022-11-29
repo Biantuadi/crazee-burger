@@ -25,6 +25,10 @@ const NavbarStyled = styled.nav`
   align-items: flex-end;
   padding: 0 60px;
 
+  @media (max-width: 768px) {
+    padding: 0 7px;
+  }
+
   .userInfo {
     display: flex;
     align-items: flex-end;

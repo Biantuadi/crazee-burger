@@ -19,6 +19,11 @@ const DashboardPageStyled = styled.div`
 
   .logo {
     transform: scale(1);
+
+    @media (max-width: 768px) {
+      transform: scale(0.8);
+      margin-left: -10px;
+    }
   }
 
 `;
