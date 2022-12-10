@@ -1,11 +1,13 @@
 import styled from "styled-components";
 import { theme } from "../../../themes";
 import Header from "../../layout/Header";
+import MainDashboard from "./MainDashboard";
 
 function DashboardPage() {
   return (
     <DashboardPageStyled>
       <Header />
+      <MainDashboard />
     </DashboardPageStyled>
   );
 }
@@ -20,6 +22,7 @@ const DashboardPageStyled = styled.div`
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     width: 100%;
