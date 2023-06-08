@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { theme } from "../../../themes";
+// import { theme } from "../../../themes";
 import Header from "../../layout/Header";
 import MainDashboard from "./MainDashboard";
 
@@ -13,7 +13,7 @@ function DashboardPage() {
 }
 
 const DashboardPageStyled = styled.div`
-  background-color: ${theme.colors.background_white};
+  background-color: transparent;
   width: 90%;
   height: 95%;
   z-index: 2;
@@ -21,7 +21,7 @@ const DashboardPageStyled = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border-radius: 10px;
+  border-radius: 15px;
   overflow: hidden;
 
   @media (max-width: 768px) {

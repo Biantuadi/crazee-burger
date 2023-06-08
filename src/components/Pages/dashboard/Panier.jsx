@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function Menu() {
+export default function Panier() {
   return (
-    <MenuStyle>
-      <h2>Menu</h2>
-    </MenuStyle>
+    <PanierStyle>
+      <h2>Panier</h2>
+    </PanierStyle>
   );
 }
 
-const MenuStyle = styled.aside`
+const PanierStyle = styled.aside`
   border: 1px solid red;
 
   @media (max-width: 630px) and (min-width: 0px) {

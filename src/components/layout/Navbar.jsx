@@ -9,7 +9,7 @@ export default function Navbar() {
     <NavbarStyled>
       <div className="userInfo">
         <h2>
-          Hey <span>{user}</span>
+          Hey, <span>{user}</span>
         </h2>
         <Link to={"/"} id="deconexion">
           Se déconnecter
@@ -55,7 +55,8 @@ const NavbarStyled = styled.nav`
   }
 
   .fa-user-circle {
-    font-size: 28px;
+    font-size: 32px;
     color: ${theme.colors.greyDark};
+    cursor: pointer;
   }
 `;

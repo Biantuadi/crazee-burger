@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { fakeMenu2 } from "../../../fakeData/fakeMenu";
+import { theme } from "../../../themes";
 
 export default function Items() {
   const items = fakeMenu2;
@@ -32,6 +33,30 @@ const ItemsStyled = styled.ul`
     height: 80vh;
     overflow: auto;
     overflow-x: hidden;
+
+    /* scroll bar */
+
+    ::-webkit-scrollbar {
+      width: 15px;
+    }
+    
+    
+    
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background: ${theme.colors.greyDark};
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+
+
+
 
     @media (max-width: 1294px) and (min-width: 891px) {
       grid-template-columns: repeat(3, 1fr);
@@ -65,8 +90,8 @@ const ItemsStyled = styled.ul`
       align-items: center;
 
       img {
-        width: 185px;
-        height: 155px;
+        width: 130px;
+        height: 120px;
       }
 
       h3 {
